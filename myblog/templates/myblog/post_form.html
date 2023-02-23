@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if user.is_logged_in %}
+  <h1>Create a new post</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+{% else %}
+  <p>Please log in first to be able to add posts.</p>
+{% endif %}
+{% endblock content %}
