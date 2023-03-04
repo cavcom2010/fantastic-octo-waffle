@@ -1,3 +1,20 @@
 body {
-    background-color: aqua;
+    background-color: rgb(142, 146, 146);
+}
+
+h1:hover {
+    color: whitesmoke;
+}
+
+h2 {
+    accent-color: yellow;
+}
+
+ 
+form button {
+    background-color: rgb(245, 245, 245);
+}
+
+nav a {
+    color: whitesmoke;
 }

@@ -1,10 +1,14 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 from .models import Post
 from .forms import PostForm
 
 def post_list(request):
-    posts = Post.objects.all().order_by('-date_posted')
+    posts = Post.objects.all()
+    paginator = Paginator(posts, 5) # Show 5 posts per page
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
     context = {'posts': posts}
     return render(request, 'myblog/post_list.html', context)
 
