@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
     <title>{% block title %}{% if title %}{{ title }}{% else %}My blog{% endif %}{% endblock title %}</title>
 </head>
 <body>
-  <nav><a href="{% url 'post_list' %}">Home | </a><a href="{% url 'post_create' %}">Create Post</a>
-    <a href="{% url 'about' %}">About Us</a></nav>
+  <nav><a href="{% url 'post_list' %}">Home | </a>
+    <a href="{% url 'post_update' post.pk %}">Update post</a></nav>
   {% block content %}  {% endblock content %}
 
 </body>

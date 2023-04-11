@@ -1,10 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Create a new post</h1>
+<!-- {% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+</head> -->
+
+<h1>Nyora post itsva</h1>
+<div class="post-form">
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Save</button>
   </form>
+</div>
 {% endblock content %}

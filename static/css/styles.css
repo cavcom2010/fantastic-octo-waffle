@@ -1,13 +1,21 @@
 body {
-    background-color: rgb(142, 146, 146);
+    background-color: rgb(221, 226, 226);
+    margin-left: 5%;
+    margin-right:5%;
+    padding: 10%;
 }
 
-h1:hover {
+
+h1.main-page:hover {
     color: whitesmoke;
 }
 
 h2 {
     accent-color: yellow;
+}
+
+h1.main-page {
+    border-style: dashed;
 }
 
  
@@ -16,5 +24,19 @@ form button {
 }
 
 nav a {
-    color: whitesmoke;
+    color: rgb(71, 37, 192);
 }
+
+div.main-body {
+    padding: 70px;
+    border-style: dotted;
+    background-color: whitesmoke;
+}
+
+div.post-form {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10%;
+    
+}
+
